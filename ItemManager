@@ -1,0 +1,550 @@
+package com.Scyye.WackyItems.items;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
+import org.bukkit.attribute.Attribute;
+import org.bukkit.attribute.AttributeModifier;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.ItemFlag;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+public class ItemManager {
+
+
+        // public static ItemStack section
+    public static ItemStack pwrsword;
+    public static ItemStack wmdpick;
+    public static ItemStack wmdshovel;
+    public static ItemStack wmdaxe;
+    public static ItemStack ffboots;
+    public static ItemStack ironpicke;
+    public static ItemStack hdhelmet;
+    public static ItemStack hdcp;
+    public static ItemStack hdleg;
+    public static ItemStack hdboots;
+    public static ItemStack zsword;
+    public static ItemStack hsword;
+    public static ItemStack rcp;
+    public static ItemStack kbstick;
+    public static ItemStack gun;
+    public static ItemStack iph;
+    public static ItemStack gsword;
+
+
+        // create methods
+    public static void init() {
+        createpwrsword();
+        createwmdpick();
+        createwmdshovel();
+        createwmdaxe();
+        createffboots();
+        createironpicke();
+        createhdhelmet();
+        createhdcp();
+        createhdleg();
+        createhdboots();
+        createzsword();
+        createhsword();
+        creatercp();
+        createkbstick();
+        creategun();
+        createiph();
+        creategsword();
+    }
+
+    public static void createpwrsword() {
+        ItemStack item1 = new ItemStack(Material.WOODEN_SWORD, 1);
+        ItemMeta meta = item1.getItemMeta();
+        meta.setDisplayName("§4Power's Sword");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Yes, it belonged to 'Power'");
+        lore.add("§7Uses the power of Power to do insane damage");
+        lore.add("");
+        lore.add("§4§lULTRA-RARE SWORD");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.DAMAGE_ALL, 1000, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        item1.setItemMeta(meta);
+        pwrsword = item1;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("pwrsword"), item1);
+        sr.shape("NHN", "HnH", "NHN");
+        sr.setIngredient('N', Material.NETHERITE_BLOCK);
+        sr.setIngredient('n', Material.NETHERITE_SWORD);
+        sr.setIngredient('H', Material.HEART_OF_THE_SEA);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createwmdpick() {
+        ItemStack item2 = new ItemStack(Material.WOODEN_PICKAXE, 1);
+        ItemMeta meta = item2.getItemMeta();
+        meta.setDisplayName("§4WMD Pick");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Power's power is so powerful, it can take the form");
+        lore.add("§7of multiple different tools!");
+        lore.add("");
+        lore.add("§4§lULTRA-RARE PICKAXE");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.DIG_SPEED, 1000, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        item2.setItemMeta(meta);
+        wmdpick = item2;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("wmd"), item2);
+        sr.shape("FHF", "HpH", "FHF");
+        sr.setIngredient('F', Material.NETHERITE_BLOCK);
+        sr.setIngredient('p', Material.NETHERITE_PICKAXE);
+        sr.setIngredient('H', Material.HEART_OF_THE_SEA);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createwmdshovel() {
+        ItemStack item2 = new ItemStack(Material.WOODEN_SHOVEL, 1);
+        ItemMeta meta = item2.getItemMeta();
+        meta.setDisplayName("§4WMD Shovel");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Power's power is so powerful, it can take the form");
+        lore.add("§7of multiple different tools!");
+        lore.add("");
+        lore.add("§4§lULTRA-RARE SHOVEL");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.DIG_SPEED, 1000, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        item2.setItemMeta(meta);
+        wmdshovel = item2;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("wmdshovel"), item2);
+        sr.shape("FHF", "HpH", "FHF");
+        sr.setIngredient('F', Material.NETHERITE_BLOCK);
+        sr.setIngredient('p', Material.NETHERITE_SHOVEL);
+        sr.setIngredient('H', Material.HEART_OF_THE_SEA);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createwmdaxe() {
+        ItemStack item2 = new ItemStack(Material.WOODEN_AXE, 1);
+        ItemMeta meta = item2.getItemMeta();
+        meta.setDisplayName("§4WMD Axe");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Power's power is so powerful, it can take the form");
+        lore.add("§7of multiple different tools!");
+        lore.add("");
+        lore.add("§4§lULTRA-RARE AXE");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.DIG_SPEED, 1000, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        item2.setItemMeta(meta);
+        wmdaxe = item2;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("wmdaxe"), item2);
+        sr.shape("FHF", "HpH", "FHF");
+        sr.setIngredient('F', Material.NETHERITE_BLOCK);
+        sr.setIngredient('p', Material.NETHERITE_AXE);
+        sr.setIngredient('H', Material.HEART_OF_THE_SEA);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createffboots() {
+        ItemStack item = new ItemStack(Material.LEATHER_BOOTS, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§4Super Boots");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Prevents you from taking fire, or fall damage");
+        lore.add("§7They were given this power by the one and only, §4§lPower§7!!");
+        lore.add("");
+        lore.add("§4§lULTRA-RARE BOOTS");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.PROTECTION_FALL, 255, true);
+        meta.addEnchant(Enchantment.PROTECTION_FIRE, 255, true);
+        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 255, true);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        item.setItemMeta(meta);
+        ffboots = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("superboots"), item);
+        sr.shape("FHF", "HpH", "FHF");
+        sr.setIngredient('F', Material.NETHERITE_BLOCK);
+        sr.setIngredient('p', Material.NETHERITE_BOOTS);
+        sr.setIngredient('H', Material.HEART_OF_THE_SEA);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createironpicke() {
+        ItemStack item = new ItemStack(Material.IRON_PICKAXE, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§2Iron Pickaxe (UPGRADED)");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7An upgraded version of the iron pickaxe");
+        lore.add("§7Mines faster, and gives more ores");
+        lore.add("");
+        lore.add("§2§lCOMMON PICKAXE");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.DIG_SPEED, 4, true);
+        meta.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 4, true);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        item.setItemMeta(meta);
+        ironpicke = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("ironpicke"), item);
+        sr.shape("FHF", "HpH", "FHF");
+        sr.setIngredient('F', Material.IRON_BLOCK);
+        sr.setIngredient('p', Material.IRON_PICKAXE);
+        sr.setIngredient('H', Material.IRON_INGOT);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createhdhelmet() {
+        ItemStack item = new ItemStack(Material.IRON_HELMET, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§eHeavy Duty Helmet");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Gives you more protection than a normal helmet!");
+        lore.add("§4Please wear whenever you are on a construction site.");
+        lore.add("");
+        lore.add("§e§lRARE HELMET");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 3, true);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        item.setItemMeta(meta);
+        hdhelmet = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("hdhelmet"), item);
+        sr.shape("xXx", "x x", "   ");
+        sr.setIngredient('X', Material.IRON_BLOCK);
+        sr.setIngredient('x', Material.IRON_INGOT);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createhdcp() {
+        ItemStack item = new ItemStack(Material.IRON_CHESTPLATE, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§eHeavy Duty Chestplate");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Gives you more protection than a normal chestplate!");
+        lore.add("§4Please wear whenever you are on a construction site.");
+        lore.add("");
+        lore.add("§e§lRARE CHESTPLATE");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 3, true);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        item.setItemMeta(meta);
+        hdcp = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("hdcp"), item);
+        sr.shape("x x", "xxx", "XxX");
+        sr.setIngredient('X', Material.IRON_BLOCK);
+        sr.setIngredient('x', Material.IRON_INGOT);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createhdleg() {
+        ItemStack item = new ItemStack(Material.IRON_LEGGINGS, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§eHeavy Duty Leggings");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Gives you more protection than a normal leggings!");
+        lore.add("§4Please wear whenever you are on a construction site.");
+        lore.add("");
+        lore.add("§e§lRARE LEGGINGS");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 3, true);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        item.setItemMeta(meta);
+        hdleg = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("hdleg"), item);
+        sr.shape("XxX", "x x", "x x");
+        sr.setIngredient('X', Material.IRON_BLOCK);
+        sr.setIngredient('x', Material.IRON_INGOT);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createhdboots() {
+        ItemStack item = new ItemStack(Material.IRON_BOOTS, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§eHeavy Duty Boots");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Gives you more protection than a normal boots!");
+        lore.add("§4Please wear whenever you are on a construction site.");
+        lore.add("");
+        lore.add("§e§lRARE BOOTS");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 3, true);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        item.setItemMeta(meta);
+        hdboots = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("hdboots"), item);
+        sr.shape("X X", "x x", "   ");
+        sr.setIngredient('X', Material.IRON_BLOCK);
+        sr.setIngredient('x', Material.IRON_INGOT);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createzsword() {
+        ItemStack item = new ItemStack(Material.DIAMOND_SWORD, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§2Zombie Sword");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Deals extra damage to zombies.");
+        lore.add("§7Has the power of smite built into");
+        lore.add("§7the blade of this sword!");
+        lore.add("");
+        lore.add("§2§lCOMMON SWORD");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.LOOT_BONUS_MOBS, 3, true);
+        meta.addEnchant(Enchantment.DAMAGE_UNDEAD, 6, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        item.setItemMeta(meta);
+        zsword = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("zsword"), item);
+        sr.shape("XXX", "XxX", "XXX");
+        sr.setIngredient('X', Material.ROTTEN_FLESH);
+        sr.setIngredient('x', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createhsword() {
+        ItemStack item = new ItemStack(Material.GOLDEN_SWORD, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§1Healthy Sword");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Hold this sword, and you");
+        lore.add("§7will gain more health!");
+        lore.add("");
+        lore.add("§1§lEPIC SWORD");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.LUCK, 1, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), "GENERIC_MAX_HEALTH", 40.0, AttributeModifier.Operation.ADD_NUMBER);
+        AttributeModifier modifier2 = new AttributeModifier(UUID.randomUUID(), "GENERIC_MAX_HEALTH", 40.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.OFF_HAND);
+        meta.addAttributeModifier(Attribute.GENERIC_MAX_HEALTH, modifier);
+        meta.addAttributeModifier(Attribute.GENERIC_MAX_HEALTH, modifier2);
+        item.setItemMeta(meta);
+        hsword = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("hsword"), item);
+        sr.shape("XXX", "XxX", "XXX");
+        sr.setIngredient('X', Material.GOLDEN_APPLE);
+        sr.setIngredient('x', Material.WOODEN_SWORD);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void creatercp() {
+        ItemStack item = new ItemStack(Material.GOLDEN_CHESTPLATE, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§1Reverse Card Chestplate");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Uses the power of the uno gods");
+        lore.add("§7to reverse all damage dealt to you");
+        lore.add("§7back onto the dealer!");
+        lore.add("");
+        lore.add("§1§lEPIC CHESTPLATE");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.THORNS, 13, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        AttributeModifier modifier = new AttributeModifier(UUID.randomUUID(), "GENERIC_ARMOR", 8, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
+        meta.addAttributeModifier(Attribute.GENERIC_ARMOR, modifier);
+        item.setItemMeta(meta);
+        rcp = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("rcp"), item);
+        sr.shape("X X", "XxX", "cXc");
+        sr.setIngredient('X', Material.NETHERITE_INGOT);
+        sr.setIngredient('x', Material.NETHERITE_CHESTPLATE);
+        sr.setIngredient('c', Material.CACTUS);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createkbstick() {
+        ItemStack item = new ItemStack(Material.STICK);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§2Knockback Stick");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Knock your enemies far, far away from you.");
+        lore.add("§7so you don't have to deal with them anymore!");
+        lore.add("");
+        lore.add("§2§lCOMMON FUN ITEM");
+        meta.setLore(lore);
+        meta.addEnchant(Enchantment.KNOCKBACK, 15, true);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        item.setItemMeta(meta);
+        kbstick = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("kbstick"), item);
+        sr.shape(" X ", " x ", " x ");
+        sr.setIngredient('X', Material.DIAMOND_BLOCK);
+        sr.setIngredient('x', Material.STICK);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void creategun() {
+        ItemStack item = new ItemStack(Material.BOW);
+        ItemMeta meta  = item.getItemMeta();
+        meta.setDisplayName("§5Gun");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Commit Murder");
+        lore.add("");
+        lore.add("HAVE FUN");
+        lore.add("");
+        lore.add("§5§lSPECIAL GUN");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.ARROW_DAMAGE, 255, true);
+        meta.addEnchant(Enchantment.ARROW_INFINITE, 1, true);
+        meta.addEnchant(Enchantment.QUICK_CHARGE, 3, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        AttributeModifier ass = new AttributeModifier(UUID.randomUUID(), "GENERIC_ATTACK_SPEED", 255, AttributeModifier.Operation.MULTIPLY_SCALAR_1, EquipmentSlot.HAND);
+        meta.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED, ass);
+        item.setItemMeta(meta);
+        gun = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("gun"), item);
+        sr.shape("Nrr", " XX", "x  ");
+        sr.setIngredient('X', Material.IRON_INGOT);
+        sr.setIngredient('x', Material.STICK);
+        sr.setIngredient('N', Material.GUNPOWDER);
+        sr.setIngredient('r', Material.REDSTONE);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void createiph() {
+        ItemStack item = new ItemStack(Material.GRAY_STAINED_GLASS_PANE, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§7");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7this is a");
+        lore.add("§7placeholder item");
+        meta.setLore(lore);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        item.setItemMeta(meta);
+        iph = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("gsword"), item);
+        sr.shape("NNN", "NnN", "NNN");
+        sr.setIngredient('N', Material.OAK_LEAVES);
+        sr.setIngredient('n', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr);
+    }
+
+    public static void creategsword() {
+        ItemStack item = new ItemStack(Material.IRON_SWORD, 1);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§2Grass Sword");
+        List<String> lore = new ArrayList<>();
+        lore.add("§7eat grass and not ass");
+        lore.add("§7Why fire prot?");
+        lore.add("");
+        lore.add("§2§lCOMMON SWORD");
+        meta.setLore(lore);
+        meta.setUnbreakable(true);
+        meta.addEnchant(Enchantment.DAMAGE_ALL, 2, true);
+        meta.addEnchant(Enchantment.WATER_WORKER, 2, true);
+        meta.addEnchant(Enchantment.PROTECTION_FIRE, 1, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        item.setItemMeta(meta);
+        gsword = item;
+
+        ShapedRecipe sr = new ShapedRecipe(NamespacedKey.minecraft("gsword"), item);
+        sr.shape("NNN", "NnN", "NNN");
+        sr.setIngredient('N', Material.OAK_LEAVES);
+        sr.setIngredient('n', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr);
+
+        ShapedRecipe sr1 = new ShapedRecipe(NamespacedKey.minecraft("gsword1"), item);
+        sr1.shape("NNN", "NnN", "NNN");
+        sr1.setIngredient('N', Material.SPRUCE_LEAVES);
+        sr1.setIngredient('n', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr1);
+
+        ShapedRecipe sr2 = new ShapedRecipe(NamespacedKey.minecraft("gsword2"), item);
+        sr2.shape("NNN", "NnN", "NNN");
+        sr2.setIngredient('N', Material.JUNGLE_LEAVES);
+        sr2.setIngredient('n', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr2);
+
+        ShapedRecipe sr3 = new ShapedRecipe(NamespacedKey.minecraft("gsword3"), item);
+        sr3.shape("NNN", "NnN", "NNN");
+        sr3.setIngredient('N', Material.BIRCH_LEAVES);
+        sr3.setIngredient('n', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr3);
+
+        ShapedRecipe sr4 = new ShapedRecipe(NamespacedKey.minecraft("gsword4"), item);
+        sr4.shape("NNN", "NnN", "NNN");
+        sr4.setIngredient('N', Material.ACACIA_LEAVES);
+        sr4.setIngredient('n', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr4);
+
+        ShapedRecipe sr5 = new ShapedRecipe(NamespacedKey.minecraft("gsword5"), item);
+        sr5.shape("NNN", "NnN", "NNN");
+        sr5.setIngredient('N', Material.AZALEA_LEAVES);
+        sr5.setIngredient('n', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr5);
+
+        ShapedRecipe sr6 = new ShapedRecipe(NamespacedKey.minecraft("gsword6"), item);
+        sr6.shape("NNN", "NnN", "NNN");
+        sr6.setIngredient('N', Material.DARK_OAK_LEAVES);
+        sr6.setIngredient('n', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr6);
+
+        ShapedRecipe sr7 = new ShapedRecipe(NamespacedKey.minecraft("gsword7"), item);
+        sr7.shape("NNN", "NnN", "NNN");
+        sr7.setIngredient('N', Material.FLOWERING_AZALEA_LEAVES);
+        sr7.setIngredient('n', Material.IRON_SWORD);
+        Bukkit.getServer().addRecipe(sr7);
+    }
+
+}
