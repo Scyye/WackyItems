@@ -1,0 +1,15 @@
+name: WackyItems
+version: 1.0.0
+author: Scyye
+main: com.Scyye.WackyItems.WackyItems
+api-version: 1.17
+commands:
+  wiadminitems:
+    description: opens the GUI where you can take any item you want without crafting
+    usage: /wiadminitems
+    permission: 4
+
+  wigiveall:
+    description: Gives all items to the player (NOT CURRENTLY WORKING, DO NOT SUBMIT ERROR REPORTS FOR THIS)
+    usage: /wigiveall
+    permission: 4
